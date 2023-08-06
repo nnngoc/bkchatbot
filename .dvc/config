@@ -1,1 +1,4 @@
-
+[core]
+    remote = origin
+['remote "origin"']
+    url = https://github.com/nnngoc/bkchatbot.git.dvc
