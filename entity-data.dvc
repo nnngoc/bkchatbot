@@ -1,0 +1,5 @@
+outs:
+    - md5: a46f1ccdbff13cc991e111f7ea508ec6.dir
+      size: 3295831
+      path: entity-data
+      nfiles: 2
