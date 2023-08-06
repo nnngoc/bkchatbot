@@ -1,25 +1,2 @@
-name: Trigger Intent Notebook
-
-on:
-  push:
-    paths:
-      - 'data/intent/'  # Path to the intent data folder
-
-jobs:
-  trigger_notebook:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.10.6  # Adjust as needed
-
-      - name: Trigger Intent Notebook
-        run: |
-          # Use Kaggle API to trigger intent notebook
-          kaggle kernels push -p intent
+123
 
