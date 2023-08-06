@@ -30,12 +30,11 @@ jobs:
 
       - name: Trigger Intent Notebook
         if: ${{ contains(github.event_paths, 'data/intent') }}
-        run: kaggle kernels push -p path_to_intent_notebook_folder -m "Notebook run triggered by data update."
+        run: kaggle kernels push -p intent
 
       - name: Trigger Entity Notebook
         if: ${{ contains(github.event_paths, 'data/entity') }}
-        run: kaggle kernels push -p path_to_entity_notebook_folder -m "Notebook run triggered by data update."
-
+        run: kaggle kernels push -p entity
       - name: Trigger Reranker Notebook
         if: ${{ contains(github.event_paths, 'data/reranker') }}
-        run: kaggle kernels push -p path_to_reranker_notebook_folder -m "Notebook run triggered by data update."
+        run: kaggle kernels push -p reranker
