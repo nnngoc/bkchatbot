@@ -3,9 +3,7 @@ name: Kaggle Notebook Trigger
 on:
   push:
     paths:
-      - 'data/intent'
-      - 'data/entity'
-      - 'data/reranker'
+      - 'intent-data.dvc'
 
 jobs:
   trigger_notebooks:
@@ -32,9 +30,3 @@ jobs:
         if: ${{ contains(github.event_paths, 'data/intent') }}
         run: kaggle kernels push -p intent
 
-      - name: Trigger Entity Notebook
-        if: ${{ contains(github.event_paths, 'data/entity') }}
-        run: kaggle kernels push -p entity
-      - name: Trigger Reranker Notebook
-        if: ${{ contains(github.event_paths, 'data/reranker') }}
-        run: kaggle kernels push -p reranker
