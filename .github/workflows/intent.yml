@@ -3,7 +3,7 @@ name: Trigger Kaggle Notebook
 on:
   push:
     paths:
-      - '**/*.dvc'  # Adjust this pattern to match your .dvc files
+      - 'intent-data.dvc'  # Adjust this pattern to match your .dvc files
 
 jobs:
   trigger_kaggle_notebook:
