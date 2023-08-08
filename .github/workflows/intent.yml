@@ -1,16 +1,16 @@
-name: Kaggle Notebook Trigger
+name: Trigger Kaggle Notebook
 
 on:
   push:
     paths:
-      - 'intent-data.dvc'
+      - '**/*.dvc'  # Adjust this pattern to match your .dvc files
 
 jobs:
-  trigger_notebooks:
+  trigger_kaggle_notebook:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Python
@@ -18,15 +18,20 @@ jobs:
         with:
           python-version: 3.10.6
 
-      - name: Install Kaggle CLI
-        run: pip install kaggle
-
-      - name: Configure Kaggle
+      - name: Install dependencies
         run: |
-          kaggle config set -n username -v ${{ secrets.KAGGLE_USERNAME }}
-          kaggle config set -n key -v ${{ secrets.KAGGLE_KEY }}
+          python -m pip install --upgrade pip
+          pip install kaggle dagshub dvc
 
-      - name: Trigger Intent Notebook
-        if: ${{ contains(github.event_paths, 'data/intent') }}
-        run: kaggle kernels push -p intent
+      - name: Authenticate with Kaggle
+        run: |
+          kaggle config set --username "${{ secrets.KAGGLE_USERNAME }}" --key "${{ secrets.KAGGLE_KEY }}"
+
+      - name: Pull DVC data
+        run: dvc pull  # Adjust this command to pull your DVC data
+
+      - name: Trigger Kaggle notebook via API
+        run: |
+          # Replace with the appropriate Kaggle notebook API command
+          kaggle kernels push -p intent
 
