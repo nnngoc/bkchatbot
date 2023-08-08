@@ -1,4 +1,4 @@
 [core]
     remote = origin
 ['remote "origin"']
-    url = https://github.com/nnngoc/bkchatbot.dvc
+    url = https://dagshub.com/nnngoc/bkchatbot.dvc
