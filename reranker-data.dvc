@@ -1,5 +1,6 @@
 outs:
-    - md5: b98f480387e6e9c1a4f99806869ebfec.dir
-      size: 111928978
-      path: reranker-data
-      nfiles: 2
+- md5: 8f0dc7dcdfa4296193984dafbd66193c.dir
+  size: 111928978
+  path: reranker-data
+  nfiles: 2
+  hash: md5
