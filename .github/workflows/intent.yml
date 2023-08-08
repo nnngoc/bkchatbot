@@ -23,8 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install kaggle
 
-      - name: Trigger Kaggle notebook via API
-        run: |
-          # Replace with the appropriate Kaggle notebook API command
-          kaggle kernels push -p intent
-
+          - name: Trigger Kaggle notebook via API
+          env:
+            KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+            KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+          run: |
+            kaggle kernels push -p intent
