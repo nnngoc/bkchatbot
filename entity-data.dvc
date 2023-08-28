@@ -1,6 +1,5 @@
 outs:
-- md5: e254f2e1b7447278a854e43a33d91dbc.dir
-  size: 3295831
-  path: entity-data
-  nfiles: 2
-  hash: md5
+    - md5: 87e50db6a6b1cfcc0a4181e9ac57f54b.dir
+      size: 3296956
+      path: entity-data
+      nfiles: 3
