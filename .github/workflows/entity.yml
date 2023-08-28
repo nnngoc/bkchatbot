@@ -1,9 +1,9 @@
-name: Trigger Intent Kaggle Notebook
+name: Trigger Entity Kaggle Notebook
 
 on:
   push:
     paths:
-      - 'intent-data.dvc'  # Adjust this pattern to match your .dvc files
+      - 'entity-data.dvc'  # Adjust this pattern to match your .dvc files
 
 jobs:
   trigger_kaggle_notebook:
@@ -28,4 +28,4 @@ jobs:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: |
-          kaggle kernels push -p intent
+          kaggle kernels push -p entity
