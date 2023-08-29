@@ -1,5 +1,6 @@
 outs:
-    - md5: 7c5c9133eb7ec60762f289483ca90528.dir
-      size: 422069
-      path: intent-data
-      nfiles: 1
+- md5: 957caa394fb89767a5d00b4860ebe99d.dir
+  size: 422069
+  path: intent-data
+  nfiles: 1
+  hash: md5
