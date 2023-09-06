@@ -1,6 +1,0 @@
-outs:
-- md5: 8f0dc7dcdfa4296193984dafbd66193c.dir
-  size: 111928978
-  path: reranker-data
-  nfiles: 2
-  hash: md5
