@@ -1,4 +1,4 @@
-# POLICY INSERT FUNCTIONS IN BKHERT CHATBOT
+# MLOPS PIPELINE IN BKHERT CHATBOT
 
 ### Goal: 
 Improve the existing model by applying MLOPS to automate the deployment, monitoring, and management of ML models in production.
